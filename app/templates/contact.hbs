@@ -1,3 +1,60 @@
-<h1>
-  Contact Page
-</h1>
+<div class="container mt-4">
+  <h1>
+    Contact Page
+  </h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div
+          class="form-group
+            {{if this.isEmailValid "has-success" "has-feedback"}}"
+        >
+          <label for="InputEmail">
+            Your email address*:
+          </label>
+          <Input
+            type="email"
+            id="InputEmail"
+            class="form-control"
+            aria-describedby="emailHelp"
+            placeholder="Your email address"
+            @value={{this.emailAddress}}
+          />
+        </div>
+        <div
+          class="form-group
+            {{if this.isMessageValid "has-success" "has-feedback"}}"
+        >
+          <label for="Textarea1">
+            Your message*:
+          </label>
+          <Textarea
+            id="Textarea1"
+            @value={{this.message}}
+            class="form-control"
+            rows="3"
+            placeholder="Your message. (At least 5 characters.)"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          disabled={{isDisabled}}
+          {{action "sendContactMessage"}}
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      {{#if responseMessage}}
+        <div class="alert alert-success">
+          {{responseMessage}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</div>

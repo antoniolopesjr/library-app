@@ -4,6 +4,7 @@ import { match, not } from "@ember/object/computed";
 export default Controller.extend({
   emailAddress: "",
   responseMessage: "",
+  headerMessage: "Coming soon",
 
   isValid: match("emailAddress", /^.+@.+\..+$/),
   isDisabled: not("isValid"),
