@@ -1,39 +1,56 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+<BsNavbar
+  @type="dark"
+  @backgroundColor="dark"
+  @collapsed={{true}}
+  @onCollapse={{action (mut collapsed) true}}
+  @onExpand={{action (mut collapsed) false}} as |navbar|
+>
   <div class="container-fluid">
     <div class="navbar-header">
-      <button
-        class="navbar-toggler collapsed"
-        data-toggle="collapse"
-        data-target="#main-navbar"
-        type="button"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="/" class="active navbar-brand">
+      <navbar.toggle />
+      <a class="active navbar-brand" href="#">
         Library App
       </a>
     </div>
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav">
-        <li class="nav-item">
-          <LinkTo @route="index" class="nav-link active">
+    <navbar.content>
+      <navbar.nav as |nav|>
+        <nav.item>
+          <nav.linkTo @route="index">
             Home
-          </LinkTo>
-        </li>
-        <li class="nav-item">
-          <LinkTo @route="about" class="nav-link">
+          </nav.linkTo>
+        </nav.item>
+        <nav.item>
+          <nav.linkTo @route="libraries">
+            Libraries
+          </nav.linkTo>
+        </nav.item>
+        <nav.item>
+          <nav.linkTo @route="about">
             About
-          </LinkTo>
-        </li>
-        <li class="nav-item">
-          <LinkTo @route="contact" class="nav-link">
+          </nav.linkTo>
+        </nav.item>
+        <nav.item>
+          <nav.linkTo @route="contact">
             Contact
-          </LinkTo>
-        </li>
-      </ul>
-    </div>
+          </nav.linkTo>
+        </nav.item>
+        <nav.dropdown as |dd|>
+          <dd.toggle>
+            Admin
+            <span class="caret"></span>
+          </dd.toggle>
+          <dd.menu as |ddm|>
+            <ddm.item>
+              <ddm.link-to @route="admin.invitations">
+                Invitations
+              </ddm.link-to>
+            </ddm.item>
+          </dd.menu>
+        </nav.dropdown>
+      </navbar.nav>
+    </navbar.content>
   </div>
-</nav>
+</BsNavbar>
 <div class="container">
   {{outlet}}
 </div>

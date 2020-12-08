@@ -39,7 +39,7 @@
         <button
           type="submit"
           class="btn btn-primary"
-          disabled={{isDisabled}}
+          disabled={{this.isDisabled}}
           {{action "sendContactMessage"}}
         >
           Send
@@ -50,9 +50,9 @@
   <br />
   <div class="row">
     <div class="col-md-6">
-      {{#if responseMessage}}
+      {{#if this.responseMessage}}
         <div class="alert alert-success">
-          {{responseMessage}}
+          {{this.responseMessage}}
         </div>
       {{/if}}
     </div>
