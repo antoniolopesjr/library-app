@@ -52,7 +52,21 @@
     <div class="col-md-6">
       {{#if this.responseMessage}}
         <div class="alert alert-success">
-          {{this.responseMessage}}
+          <h4>
+            Thank you! Your message is sent
+          </h4>
+          <p>
+            To:
+            {{this.responseMessage.email}}
+          </p>
+          <p>
+            Message:
+            {{this.responseMessage.message}}
+          </p>
+          <p>
+            Reference ID:
+            {{this.responseMessage.id}}
+          </p>
         </div>
       {{/if}}
     </div>
