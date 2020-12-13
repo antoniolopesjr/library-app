@@ -10,6 +10,9 @@
       <th>
         E-mail
       </th>
+      <th>
+        Actions
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +23,15 @@
         </th>
         <td>
           {{invitation.email}}
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger btn-xs"
+            {{action "deleteInvitation" invitation}}
+          >
+            Delete
+          </button>
         </td>
       </tr>
     {{/each}}
