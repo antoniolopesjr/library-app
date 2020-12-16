@@ -5820,6 +5820,15 @@ ember-export-application-global@^2.0.1:
   resolved "https://registry.yarnpkg.com/ember-export-application-global/-/ember-export-application-global-2.0.1.tgz#b120a70e322ab208defc9e2daebe8d0dfc2dcd46"
   integrity sha512-B7wiurPgsxsSGzJuPFkpBWnaeuCu2PGpG2BjyrfA1VcL7//o+5RSnZqiCEY326y7qmxb2GoCgo0ft03KBU0rRw==
 
+ember-faker@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/ember-faker/-/ember-faker-1.6.0.tgz#646267bdd5f9b516ba7574d5d83d5603c7818aa7"
+  integrity sha512-x2e71iplV3UEfwTculKhswUq2y4CavOfEiiOsJ1tM0n4z4O3ofsmdwcBPjqa7ANxRdH8pTUQXkpQx3rqEC2+oA==
+  dependencies:
+    ember-cli-babel "^7.0.0"
+    ember-cli-node-assets "^0.2.2"
+    faker "^3.0.0"
+
 ember-fetch@^8.0.2:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/ember-fetch/-/ember-fetch-8.0.2.tgz#9838b9f01e33fcd23550ccf38ae4f1f90cc47113"
@@ -6675,6 +6684,11 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+
+faker@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/faker/-/faker-3.1.0.tgz#0f908faf4e6ec02524e54a57e432c5c013e08c9f"
+  integrity sha1-D5CPr05uwCUk5UpX5DLFwBPgjJ8=
 
 fast-deep-equal@^3.1.1:
   version "3.1.3"
