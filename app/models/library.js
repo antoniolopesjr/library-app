@@ -1,5 +1,5 @@
-import DS from "ember-data";
 import { notEmpty } from "@ember/object/computed";
+import DS from "ember-data";
 import Faker from "faker";
 
 export default DS.Model.extend({
@@ -7,7 +7,7 @@ export default DS.Model.extend({
   address: DS.attr("string"),
   phone: DS.attr("string"),
 
-  books: DS.hasMany("book"),
+  books: DS.hasMany("book", { inverse: "library", async: true }),
 
   isValid: notEmpty("name"),
 
