@@ -8,10 +8,7 @@
         {{#link-to "libraries.edit" library.id class="btn btn-success btn-xs"}}
           Edit
         {{/link-to}}
-        <button
-          class="btn btn-danger btn-xs"
-          {{action "deleteLibrary" library}}
-        >
+        <button type="button" class="btn btn-danger btn-xs" {{action "deleteLibrary" library}}>
           Delete
         </button>
       {{/library-item}}
